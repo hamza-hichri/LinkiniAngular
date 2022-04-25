@@ -1,0 +1,101 @@
+<div class="banner-innerpage" style="background-image: url(assets/images/landingpage/banner-bg2.jpg)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <table>
+                <thead style="text-align: center;color: aliceblue;" class="table ml-2">
+                    <th>
+                        id voyage
+                    </th>
+                    <th>
+                        destination
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let t of ListTravel" style="text-align: center;">
+                        <td>{{t.id_voyage}}
+                        </td>
+                        <td>{{t.destination}}
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-primary" (click)="open(mymodal1)">edit</button>
+
+                            <ng-template #mymodal1 let-modal1>
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="modal-basic-title">Edit Current Travel</h4>
+                                    <button type="button" class="close" aria-label="Close" (click)="modal1.dismiss('Cross click')">
+                                        <span aria-hidden="true" (click)="cancel()">×</span>
+                                    </button>
+
+                                </div>
+                                <div class="center">
+                                    <form>
+                                        <div class="row" class="col-md-6">
+                                            <input type="text" placeholder="Destination ..." [(ngModel)]="t.destination" [ngModelOptions]="{standalone : true}">
+                                        </div>
+                                        <div class="row" class="col-md-6">
+                                            <input type="date" [(ngModel)]="t.start_date" [ngModelOptions]="{standalone : true}">
+                                        </div>
+                                        <div class="row" class="col-md-6">
+                                            <input type="date" [(ngModel)]="t.finish_date" [ngModelOptions]="{standalone : true}">
+                                        </div>
+                                        <div class="row" class="col-md-6">
+                                            <input type="text" placeholder="Travel Schudle" [(ngModel)]="t.schudle" [ngModelOptions]="{standalone : true}">
+                                        </div>
+                                        <br>
+                                        <button type="button" class="btn btn-success" (click)="updateTravel(t)" (click)="modal1.close('Save click')">Edit</button>
+                                        <button type="button" class="btn btn-info" (click)="modal1.close()">Cancel</button>
+                                    </form>
+                                </div>
+                            </ng-template>
+                            <button class="btn btn-outline-danger" (click)="deleteTravel(t.id_voyage)">Delete</button>
+                            <button class="btn btn-outline-warning" (click)="deleteTravel(t.id_voyage)">Detail</button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row justify-content-center" style="margin-top: 10%;">
+
+            <button class="btn btn-outline-success" (click)="open(mymodal1)">Add Travel</button>
+
+
+            <ng-template #mymodal1 let-modal1>
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Add new Travel</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal1.dismiss('Cross click')">
+                        <span aria-hidden="true" (click)="cancel()">×</span>
+                    </button>
+
+                </div>
+                <div class="center">
+                    <app-form (notificationaddtravel)="AddTravel($event)" [AddTravel]="FormType">
+
+                    </app-form>
+
+                    <!-- <form>
+                        <div class="row" class="col-md-6">
+                            <input type="text" placeholder="Destination ..." [(ngModel)]="travel.destination" [ngModelOptions]="{standalone : true}">
+                        </div>
+                        <div class="row" class="col-md-6">
+                            <input type="date" [(ngModel)]="travel.start_date" [ngModelOptions]="{standalone : true}">
+                        </div>
+                        <div class="row" class="col-md-6">
+                            <input type="date" [(ngModel)]="travel.finish_date" [ngModelOptions]="{standalone : true}">
+                        </div>
+                        <div class="row" class="col-md-6">
+                            <input type="text" placeholder="Travel Schudle" [(ngModel)]="travel.schudle" [ngModelOptions]="{standalone : true}">
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-success" (click)="AddTravel(travel)" (click)="modal1.close('Save click')">Add</button>
+                        <button type="button" class="btn btn-info" (click)="modal1.close('Save click')">Cancel</button>
+                    </form> -->
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

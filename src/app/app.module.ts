@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TravelComponent } from './travel/travel.component';
+import { FormComponent } from './travel/form/form.component';
 
 
 
@@ -17,6 +19,8 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
+    TravelComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
