@@ -7,6 +7,7 @@ import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 
 
 import { FullComponent } from './layout/full/full.component';
+import { TravelComponent } from '../travel/travel.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: '', component: BlogComponent },
       { path: 'blogDetail/:id', component: BlogDetailComponent },
       { path: 'about', component: AboutComponent },
+      { path: 'Trips', component: TravelComponent },
     ]
   }
 ];
