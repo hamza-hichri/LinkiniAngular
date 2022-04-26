@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthServiceService } from 'src/app/Services/auth-service.service';
 
 @Component({
   selector: 'app-banner-navigation',
@@ -9,7 +10,7 @@ export class BannerNavigationComponent implements OnInit {
 
   logoutStatus = false;
 
-  constructor() { 
+  constructor(public authService: AuthServiceService) { 
 
   }
 

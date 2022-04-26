@@ -18,6 +18,11 @@
             </a>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']">
+            <a *ngIf="authService.isLoggedIn$ | async" class="nav-link" routerLink="/invitation">
+                invitation
+            </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
             <a class="nav-link" routerLink="#">
                 Trips
             </a>
@@ -28,12 +33,12 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-success-gradiant font-14" routerLink="/">
+            <a class="btn btn-success-gradiant font-14" routerLink="/singin">
                 Login
             </a>
         </li>
         <li class="nav-item" style="margin-left: 5px;">
-            <a class="btn btn-danger-gradiant font-14" routerLink="/">
+            <a class="btn btn-danger-gradiant font-14" routerLink="/singup">
                 SignUp
             </a>
         </li>
