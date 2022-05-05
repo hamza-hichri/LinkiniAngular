@@ -1,0 +1,28 @@
+<div class="banner-innerpage" style="background-image: url(assets/images/landingpage/banner-bg2.jpg)">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card" style="text-align: center;" style="background-color: rgba(240, 248, 255, 0.445);">
+                <div class="card-body" style="color: white;">
+                    <h4 class="card-title" style="color: white;"><span style="letter-spacing: 2px;">Destination</span> : <span style="font-weight: bold;">{{detailtravel.destination}} </span></h4>
+                    <h5 class="card-subtitle mb-2 text-muted"> <span style="color: white;"><span style="letter-spacing: 2px;font-family: Arial, Helvetica, sans-serif;"> Starting Date :</span> {{detailtravel.start_date}} </span>
+                    </h5>
+                    <h5 class="card-subtitle mb-2 text-muted" style="color: white;"> <span style="color: white;"><span style="letter-spacing: 2px;font-family: Arial, Helvetica, sans-serif;"> Finish Date :</span> {{detailtravel.finish_date}}</span>
+                    </h5>
+                    <p class="card-text" style="color: white;">
+                        <span style="letter-spacing: 2px;font-family: Arial, Helvetica, sans-serif;">Plan:</span> {{detailtravel.schudle}}
+                    </p>
+                    <select [(ngModel)]="users.id">
+                        <option *ngFor="let user of users" [value]="user.email">
+                          {{title.username}}
+                        </option>
+                    </select>
+
+                    <a style="color: rgb(92, 92, 251);cursor: pointer;" routerLink="/Trips" class="card-link"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</a>
+                </div>
+
+            </div>
+            <!-- <br> id : {{detailtravel.id_voyage}} <br>destination : {{detailtravel.destination}} <br>{{detailtravel.start_date}} <br> {{detailtravel.finish_date}} <br> {{detailtravel.schudle}} -->
+        </div>
+    </div>
+</div>
