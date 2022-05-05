@@ -1,0 +1,52 @@
+<br><br><br><br>
+<button class="btn btn-round btn-sm btn-success" (click)="open(mymodal1)">Add new invitation</button>
+<br><br>
+<ng-template #mymodal1 let-modal1>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Add new invitation</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal1.dismiss('Cross click')">
+            <span aria-hidden="true" (click)="cancel()">×</span>
+        </button>
+
+    </div>
+    <div class="center">
+        <form>
+            <div class="row" class="col-md-6">
+                <input type="text" placeholder="invitation Name" [(ngModel)]="i.content"
+                    [ngModelOptions]="{standalone : true}">{{i.content}}
+            </div>
+            <div class="row" class="col-md-6">
+                <input type="text" placeholder="v" [(ngModel)]="i.email"
+                    [ngModelOptions]="{standalone : true}">
+                    {{i.email}}
+                </div>
+            <div class="row" class="col-md-6">
+                <input type="text" placeholder="invitationdestination"
+                    [(ngModel)]="i.invitaiondestination" [ngModelOptions]="{standalone : true}">
+                    {{i.invitaiondestination}}
+                </div>
+            <div class="row" class="col-md-6">
+                <input type="text" placeholder="state" [(ngModel)]="i.state"
+                    [ngModelOptions]="{standalone : true}">{{i.state}}
+            </div>
+            <div class="row" class="col-md-6">
+                <input type="text" placeholder="username" [(ngModel)]="aa.username"
+                    [ngModelOptions]="{standalone : true}">{{aa.username}}
+            </div>
+            <div class="row" class="col-md-6">
+                <input type="text" placeholder="password" [(ngModel)]="aa.password"
+                    [ngModelOptions]="{standalone : true}">{{aa.password}}
+            </div>
+            <br>
+            <button type="button" class="btn btn-success" (click)="addInvitation(i)"
+                (click)="modal1.close('Save click')">Add</button>
+            <button type="button" class="btn btn-info" (click)="modal1.close('Save click')">Cancel</button>
+        </form>
+    </div>
+</ng-template>
+<div class="row">
+<app-invitationfils class="col-md-4" *ngFor='let p of ListInvitation'[invitation]="p"
+
+(notification4)="editInvitation($event)"
+(notification5)="deleteInvitation($event)"
+></app-invitationfils></div>

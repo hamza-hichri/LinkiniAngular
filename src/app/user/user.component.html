@@ -1,0 +1,35 @@
+<br><br><br><br><br>
+<div class="row">
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngFor="let user of Listuser |paginate:{
+                itemsPerPage : tablesize,
+                currentPage :page,  
+                totalItems : count
+                };" class="row">
+                <div class="card" class="text-center">
+                    <div class="card" style="width: 18rem;background-color: rgb(243, 236, 219);">
+                        <img src="\assets\images\background\kisspng-wedding-invitation-computer-icons-symbol-5af3da4a69c969.2032132815259305704333-removebg-preview.png"
+                            style="width: 50%; margin-left: auto; margin-right: auto;" class="card-img-top" alt="...">
+                        <div class="card-body" style="text-align: center;">
+                            <h5 class="card-title">id : {{user.id_user}}</h5>
+                            <h5 class="card-text">name : {{user.name}}</h5>
+                            <h5 class="card-text">email : {{user.email}}</h5>
+                            <h5 class="card-text">username : {{user.username}}</h5>
+                            <h5 class="card-text">profession : {{user.profession}}</h5>
+                            <h5 class="card-text">domain : {{user.domain}}</h5>
+                            <h5 class="card-text">likebudge : {{user.likebudge}}</h5>
+                            <h5 class="card-title">feedbackbudge : {{user.feedbackbudge}}</h5>
+                            <h5 class="card-text">activitebudge : {{user.activitebudge}}</h5>
+                            <h5 class="card-text">reclamationbudge : {{user.reclamationbudge}}</h5>
+                            <h5 class="card-text">PhoneNumber : {{user.PhoneNumber}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pagination-controls (pageChange)="page = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>

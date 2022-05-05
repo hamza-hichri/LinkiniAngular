@@ -1,0 +1,71 @@
+<br><br><br><br>
+<div class="row">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="card" class="text-center">
+                    <div class="card" style="width: 18rem;background-color: rgb(243, 236, 219);">
+                        <img src="\assets\images\background\kisspng-wedding-invitation-computer-icons-symbol-5af3da4a69c969.2032132815259305704333-removebg-preview.png"
+                            style="width: 50%; margin-left: auto;
+                        margin-right: auto;" class="card-img-top" alt="...">
+                        <div class="card-body" style="text-align: center;">
+                            <h5 class="card-title">content : {{invitation.content}}</h5>
+                            <h5 class="card-text">email : {{invitation.email}}</h5>
+                            <h5 class="card-text">invitaiondestination : {{invitation.invitaiondestination}}</h5>
+                            <h5 class="card-text">state : {{invitation.state}}</h5>
+                            <button type="button" class="btn btn-outline-primary" (click)="open(mymodal)">edit</button>
+                            <button class="btn btn-success"
+                                (click)=invdeleteInvitation(invitation.id_invitation)>deleteInvitation</button>
+                            <ng-template #mymodal let-modal>
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="modal-basic-title">Edit</h4>
+                                    <button type="button" class="close" aria-label="Close"
+                                        (click)="modal.dismiss('Cross click')">
+                                        <span aria-hidden="true" (click)="cancel()">×</span>
+
+                                    </button>
+
+                                </div>
+                                <div>
+                                    <form>
+                                        <div class="modal-body">
+
+                                            <div class="row" class="col-md-5">
+                                                <label>content</label>
+                                                <input type="text" [(ngModel)]="invitation.content"
+                                                    [ngModelOptions]="{standalone : true}" />
+                                            </div>
+                                            <div class="row" class="col-md-5">
+                                                <label>email</label>
+                                                <input type="text" [(ngModel)]="invitation.email"
+                                                    [ngModelOptions]="{standalone : true}" />
+                                            </div>
+                                            <div class="row" class="col-md-5">
+                                                <label>invitationdestination</label>
+                                                <input type="text" [(ngModel)]="invitation.invitaiondestination"
+                                                    [ngModelOptions]="{standalone : true}" />
+                                            </div>
+                                            <div class="row" class="col-md-5">
+                                                <label>state</label>
+                                                <input type="text" [(ngModel)]="invitation.state"
+                                                    [ngModelOptions]="{standalone : true}" />
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-info"
+                                                (click)="modal.close('Save click')" (click)="cancel()">Cancel</button>
+                                            <button class="btn btn-success" (click)="inveditInvitation(invitation)"
+                                                (click)="modal.close('Save click')">Validate</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+               
+        </div>
+    </div>
+</div>

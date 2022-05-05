@@ -13,7 +13,7 @@
                 </button>
 
 
-                <app-banner-navigation class="ml-auto"></app-banner-navigation>
+                <app-banner-navigation *ngIf="authService.isLoggedIn$ | async" class="ml-auto"></app-banner-navigation>
 
             </nav>
         </div>
