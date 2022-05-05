@@ -9,19 +9,19 @@ export class InvitationServiceService {
   constructor(private httpClient :HttpClient) { }
 
 public getAllInvitation(){
-    return this.httpClient.get("http://localhost:8083/Invitation/get-all-Invitation")
+    return this.httpClient.get("http://localhost:8081/Invitation/get-all-Invitation")
 }
 addInvitation(invitation : any){
-  return this.httpClient.post("http://localhost:8083/Invitation/addInvitation",invitation)
+  return this.httpClient.post("http://localhost:8081/Invitation/addInvitation",invitation)
 }
 editInvitation(invitation : any){
-  return this.httpClient.put("http://localhost:8083/Invitation/modify-Invitation",invitation)
+  return this.httpClient.put("http://localhost:8081/Invitation/modify-Invitation",invitation)
 }
 deleteInvitation(id_invitation : any){
-  return this.httpClient.delete("http://localhost:8083/Invitation/remove-Invitation/"+id_invitation)
+  return this.httpClient.delete("http://localhost:8081/Invitation/remove-Invitation/"+id_invitation)
 }
 getallusers(){
-  return this.httpClient.get("http://localhost:8083/Invitation/alluser")
+  return this.httpClient.get("http://localhost:8081/Invitation/alluser")
 }
 
 }

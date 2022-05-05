@@ -29,7 +29,7 @@ import { SendemailComponent } from './sendemail/sendemail.component';
     AppComponent,
     SingInComponent,
     SingUpComponent,
-    // NavComponent,
+    //BannerNavigationComponent,
     InvitationComponent,
     ProfileComponent,
     InvitationfilsComponent,
