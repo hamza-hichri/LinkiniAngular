@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TravelComponent } from './travel/travel.component';
 import { FormComponent } from './travel/form/form.component';
+import { DetailtravelComponent } from './travel/detailtravel/detailtravel.component';
 
 
 
@@ -21,6 +22,7 @@ import { FormComponent } from './travel/form/form.component';
     AppComponent,
     TravelComponent,
     FormComponent,
+    DetailtravelComponent,
   ],
   imports: [
     BrowserModule,
