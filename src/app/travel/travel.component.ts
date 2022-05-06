@@ -12,6 +12,7 @@ import { VoyageService } from '../services/voyage.service';
 })
 export class TravelComponent implements OnInit {
   user!:User;
+  test:any;
   ListTravel:any;
   detail:any;
   form:boolean=false;
@@ -21,6 +22,8 @@ export class TravelComponent implements OnInit {
   constructor(private travelSevice:VoyageService,private modalService:NgbModal,private router:Router) { }
 
   ngOnInit(): void {
+    this.getstats()
+   
     this.getAllTravel();
     this.user={
       id_user: null,
@@ -95,5 +98,9 @@ export class TravelComponent implements OnInit {
     }
     cancel(){
       this.form = false;
+    }
+    getstats(){
+      this.travelSevice.GetStats().subscribe((res)=>this.test=res);
+      console.log(this.test);
     }
 }

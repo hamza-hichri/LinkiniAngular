@@ -9,13 +9,15 @@ import { VoyageService } from 'src/app/services/voyage.service';
 })
 export class DetailtravelComponent implements OnInit {
 
-  constructor(private travelSevice:VoyageService,private activatedRoute:ActivatedRoute) { }
-  id:any;
-  user1:User;
-  users:any;
-  detailtravel!:any;
+  constructor(private travelSevice: VoyageService, private activatedRoute: ActivatedRoute) { }
+  id: any;
+  test!: any;
+  user1: User;
+  users: any;
+  detailtravel!: any;
   ngOnInit(): void {
-    this.user1={
+   
+    this.user1 = {
       id_user: 1,
       name: null,
       email: null,
@@ -30,25 +32,25 @@ export class DetailtravelComponent implements OnInit {
       reclamationbudge: null,
       PhoneNumber: null,
     }
-    this.activatedRoute.paramMap.subscribe(param=>{ 
-      this.id=param.get('id');
+    this.activatedRoute.paramMap.subscribe(param => {
+      this.id = param.get('id');
       this.getallusers();
     });
     this.GetTravelById(this.id);
-    console.log(this.detailtravel);
+   
   }
-  GetTravelById(id){
-this.travelSevice.DetailTravel(id).subscribe((res)=>this.detailtravel=res)
+  GetTravelById(id) {
+    this.travelSevice.DetailTravel(id).subscribe((res) => this.detailtravel = res)
 
   }
-  getallusers(){
-    this.travelSevice.getAllUsers().subscribe((res)=>this.users=res);
+  getallusers() {
+    this.travelSevice.getAllUsers().subscribe((res) => this.users = res);
   }
-  affectuser(iduser:number){
-    this.travelSevice.AffectUserTravel(this.id,iduser).subscribe();
+  affectuser(iduser: number) {
+    this.travelSevice.AffectUserTravel(this.id, iduser).subscribe();
     alert("affected successfully")
 
   }
-
+  
 
 }

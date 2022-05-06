@@ -31,5 +31,8 @@ export class VoyageService {
     return this.httpClient.post("http://localhost:8083/api/pidev/affecttravel/"+idtravel+"/"+iduser,null)
 
   }
+  GetStats(){
+    return this.httpClient.get("http://localhost:8083/api/pidev/Visited")
+  }
 
 }
