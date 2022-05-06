@@ -9,9 +9,6 @@ export class VoyageService {
   readonly API_URL="http://localhost:8083/api/pidev"
 
   constructor(private httpClient:HttpClient) { }
-  getAllUsers(){
-    return this.httpClient.get("http://localhost:8083/api/pidev/Allusers")
-  }
   getAllTravel(){
     return this.httpClient.get("http://localhost:8083/api/pidev/ShowAllTravels")
   }
@@ -24,12 +21,6 @@ export class VoyageService {
   DeleteTravel(idTravel:any){
     return this.httpClient.delete("http://localhost:8083/api/pidev/DeleteTravel/"+idTravel)
   }
-  DetailTravel(idTravel:any){
-    return this.httpClient.get("http://localhost:8083/api/pidev/DetailTravel/"+idTravel)
-  }
-  AffectUserTravel(idtravel:any,iduser:any){
-    return this.httpClient.post("http://localhost:8083/api/pidev/affecttravel/"+idtravel+"/"+iduser,null)
-
-  }
+  
 
 }

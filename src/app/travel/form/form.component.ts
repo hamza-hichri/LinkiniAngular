@@ -10,7 +10,6 @@ import { VoyageService } from 'src/app/services/voyage.service';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  users:any;
   t:Voyage;
   @Input()AddTravel:string;
   @Output() notificationaddtravel=new EventEmitter<Voyage>();
@@ -20,20 +19,10 @@ export class FormComponent implements OnInit {
   constructor(private travelSevice:VoyageService,private modalService:NgbModal) { }
 
   ngOnInit(): void {
-     this.t=new Voyage;
-     this.getallusers();
-     
-  }
-  getallusers(){
-    this.travelSevice.getAllTravel().subscribe(res=>this.users=res)
+    this.t=new Voyage;
   }
   addvoyagenotif(){
-    // let iduser = this.userService.getCurrentUser().getId();
-    // this.t.user= user;
-            if (this.t.id_voyage==null){
-      this.notificationaddtravel.emit(this.t);
-    }
-    else this
+    this.notificationaddtravel.emit(this.t);
     
   }
   

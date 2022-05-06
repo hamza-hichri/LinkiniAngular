@@ -1,3 +1,7 @@
+
+
+
+
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -8,7 +12,7 @@ import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 
 import { FullComponent } from './layout/full/full.component';
 import { TravelComponent } from '../travel/travel.component';
-import { DetailtravelComponent } from '../travel/detailtravel/detailtravel.component';
+import { PostComponent } from '../post/post.component';
 
 
 const routes: Routes = [
@@ -20,7 +24,7 @@ const routes: Routes = [
       { path: 'blogDetail/:id', component: BlogDetailComponent },
       { path: 'about', component: AboutComponent },
       { path: 'Trips', component: TravelComponent },
-      { path: 'Trips/:id', component: DetailtravelComponent },
+      { path: 'Forum', component: PostComponent }
     ]
   }
 ];

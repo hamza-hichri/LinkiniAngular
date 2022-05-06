@@ -1,0 +1,12 @@
+<form>
+    <div class="row" class="col-md-6">
+        <input type="text" placeholder="Description ..." [(ngModel)]="t.description" [ngModelOptions]="{standalone : true}">
+    </div>
+    <div class="row" class="col-md-6">
+        <input type="text" placeholder="Title ..." [(ngModel)]="t.title" [ngModelOptions]="{standalone : true}">
+    </div>
+
+    <br>
+    <button type="button" class="btn btn-success" (click)="addpublicationnotif()">{{Publicationaddc}}</button>
+    <button type="button" class="btn btn-info">Cancel</button>
+</form>

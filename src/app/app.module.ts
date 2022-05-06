@@ -10,9 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TravelComponent } from './travel/travel.component';
 import { FormComponent } from './travel/form/form.component';
-import { DetailtravelComponent } from './travel/detailtravel/detailtravel.component';
-import { AppUserModule } from './app-user/app-user.module';
-
+import { PostComponent } from './post/post.component';
+import { FoormComponent } from './post/foorm/foorm.component';
+import { StatComponent } from './stat/stat.component';
+import {  ChartModule } from '@syncfusion/ej2-angular-charts';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -23,7 +25,9 @@ import { AppUserModule } from './app-user/app-user.module';
     AppComponent,
     TravelComponent,
     FormComponent,
-    DetailtravelComponent,
+    PostComponent,
+    FoormComponent,
+    StatComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,10 +35,11 @@ import { AppUserModule } from './app-user/app-user.module';
     HttpClientModule,
     NgbModule,
     FormsModule,
-    AppUserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartModule,NgxChartsModule
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

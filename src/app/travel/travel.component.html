@@ -3,7 +3,9 @@
         <div class="row justify-content-center">
             <table>
                 <thead style="text-align: center;color: aliceblue;" class="table ml-2">
-
+                    <th>
+                        id voyage
+                    </th>
                     <th>
                         destination
                     </th>
@@ -11,14 +13,12 @@
                         Action
                     </th>
                 </thead>
-                <tbody style="color:white">
+                <tbody>
 
                     <tr *ngFor="let t of ListTravel" style="text-align: center;">
-
-                        <td>
-                            <h4 style="color: white;font-size: 100%">
-                                {{t.destination}}
-                            </h4>
+                        <td>{{t.id_voyage}}
+                        </td>
+                        <td>{{t.destination}}
                         </td>
                         <td>
                             <button class="btn btn-outline-primary" (click)="open(mymodal1)">edit</button>
@@ -52,7 +52,7 @@
                                 </div>
                             </ng-template>
                             <button class="btn btn-outline-danger" (click)="deleteTravel(t.id_voyage)">Delete</button>
-                            <button class="btn btn-outline-warning" (click)="detailTravel(t.id_voyage)" routerLink="/Trips/{{t.id_voyage}}">Detail</button>
+                            <button class="btn btn-outline-warning" (click)="deleteTravel(t.id_voyage)">Detail</button>
                         </td>
 
                     </tr>
@@ -73,7 +73,6 @@
 
                 </div>
                 <div class="center">
-                    <!-- objet faragh n3adih  -->
                     <app-form (notificationaddtravel)="AddTravel($event)" [AddTravel]="FormType">
 
                     </app-form>
