@@ -27,5 +27,9 @@ export class VoyageService {
   DetailTravel(idTravel:any){
     return this.httpClient.get("http://localhost:8083/api/pidev/DetailTravel/"+idTravel)
   }
+  AffectUserTravel(idtravel:any,iduser:any){
+    return this.httpClient.post("http://localhost:8083/api/pidev/affecttravel/"+idtravel+"/"+iduser,null)
+
+  }
 
 }
