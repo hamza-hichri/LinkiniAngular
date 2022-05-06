@@ -12,13 +12,19 @@
                     <p class="card-text" style="color: white;">
                         <span style="letter-spacing: 2px;font-family: Arial, Helvetica, sans-serif;">Plan:</span> {{detailtravel.schudle}}
                     </p>
-                    <select [(ngModel)]="users.id">
-                        <option *ngFor="let user of users" [value]="user.email">
-                          {{title.username}}
+                    <div>
+                        <select class="form-group" style="font-size: 130%;border-radius:10px 15px 15px 10px;">
+                            <option value=""selected><span style="font-size: larger; font-family: Arial, Helvetica, sans-serif; ">Affect user . . .</span> </option>
+                        <option *ngFor="let user of users" [value]="user.id_user">
+                          {{user.email}}
                         </option>
                     </select>
+                        <div class="row justify-content-center">
 
-                    <a style="color: rgb(92, 92, 251);cursor: pointer;" routerLink="/Trips" class="card-link"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</a>
+                            <button style="font-size:70%" class="btn btn-outline-secondary" (click)="affectuser(user1.id_user)">Affect User </button>
+                        </div>
+                    </div>
+                    <a style="color: rgb(92, 92, 251);cursor: pointer;font-weight: bold;" routerLink="/Trips" class="card-link"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</a>
                 </div>
 
             </div>
