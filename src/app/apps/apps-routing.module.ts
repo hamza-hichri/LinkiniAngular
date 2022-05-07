@@ -7,8 +7,8 @@ import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 
 
 import { FullComponent } from './layout/full/full.component';
-import { TravelComponent } from '../travel/travel.component';
-import { DetailtravelComponent } from '../travel/detailtravel/detailtravel.component';
+import { ReclamationComponent } from '../reclamation/reclamation.component';
+import { FeedBackComponent } from '../feed-back/feed-back.component';
 
 
 const routes: Routes = [
@@ -19,8 +19,8 @@ const routes: Routes = [
       { path: '', component: BlogComponent },
       { path: 'blogDetail/:id', component: BlogDetailComponent },
       { path: 'about', component: AboutComponent },
-      { path: 'Trips', component: TravelComponent },
-      { path: 'Trips/:id', component: DetailtravelComponent },
+      { path: 'reclamation', component: ReclamationComponent },
+      { path: 'FeedBack', component: FeedBackComponent },
     ]
   }
 ];

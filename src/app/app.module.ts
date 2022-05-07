@@ -8,10 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TravelComponent } from './travel/travel.component';
-import { FormComponent } from './travel/form/form.component';
-import { DetailtravelComponent } from './travel/detailtravel/detailtravel.component';
-import { AppUserModule } from './app-user/app-user.module';
+import { ReclamationComponent } from './reclamation/reclamation.component';
+import { FeedBackComponent } from './feed-back/feed-back.component';
 
 
 
@@ -21,9 +19,8 @@ import { AppUserModule } from './app-user/app-user.module';
 @NgModule({
   declarations: [
     AppComponent,
-    TravelComponent,
-    FormComponent,
-    DetailtravelComponent,
+    ReclamationComponent,
+    FeedBackComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +28,6 @@ import { AppUserModule } from './app-user/app-user.module';
     HttpClientModule,
     NgbModule,
     FormsModule,
-    AppUserModule,
     ReactiveFormsModule
   ],
   providers: [],
