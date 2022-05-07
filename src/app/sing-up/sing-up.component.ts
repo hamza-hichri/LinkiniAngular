@@ -51,17 +51,9 @@ user_roles1 : any ;
       reclamationbudge : null,
       PhoneNumber : null, 
     }
-    // this.form = this.formBuilder.group({
-    //   name: '',
-    //   email: '',
-    //   roles :'',
-    //   password: ''
-    // });
+    
   }
-  // submit(): void {
-  //   this.http.post('http://localhost:8081/api/auth/signup', this.form.getRawValue())
-  //     .subscribe(() => this.router.navigate(['/singin']));
-  // }
+  
 adduser(u : any):void {
   this.userservice.adduser(u).subscribe()
 }

@@ -13,30 +13,35 @@
         <form>
             <div class="row" class="col-md-6">
                 <input type="text" placeholder="invitation Name" [(ngModel)]="i.content"
-                    [ngModelOptions]="{standalone : true}">{{i.content}}
+                    [ngModelOptions]="{standalone : true}">
             </div>
             <div class="row" class="col-md-6">
                 <input type="text" placeholder="v" [(ngModel)]="i.email"
                     [ngModelOptions]="{standalone : true}">
-                    {{i.email}}
                 </div>
             <div class="row" class="col-md-6">
                 <input type="text" placeholder="invitationdestination"
                     [(ngModel)]="i.invitaiondestination" [ngModelOptions]="{standalone : true}">
-                    {{i.invitaiondestination}}
                 </div>
             <div class="row" class="col-md-6">
                 <input type="text" placeholder="state" [(ngModel)]="i.state"
-                    [ngModelOptions]="{standalone : true}">{{i.state}}
+                    [ngModelOptions]="{standalone : true}">
             </div>
             <div class="row" class="col-md-6">
                 <input type="text" placeholder="username" [(ngModel)]="aa.username"
-                    [ngModelOptions]="{standalone : true}">{{aa.username}}
+                    [ngModelOptions]="{standalone : true}">
             </div>
             <div class="row" class="col-md-6">
                 <input type="text" placeholder="password" [(ngModel)]="aa.password"
-                    [ngModelOptions]="{standalone : true}">{{aa.password}}
+                    [ngModelOptions]="{standalone : true}">
             </div>
+            <!-- <form [formGroup]="aFormGroup">
+                <ngx-recaptcha2 #captchaElem
+                  [siteKey]="siteKey"
+                  formControlName="recaptcha">
+                </ngx-recaptcha2>
+              </form> -->
+              
             <br>
             <button type="button" class="btn btn-success" (click)="addInvitation(i)"
                 (click)="modal1.close('Save click')">Add</button>

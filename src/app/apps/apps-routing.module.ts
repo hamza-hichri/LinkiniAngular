@@ -9,6 +9,8 @@ import { SingInComponent } from '../sing-in/sing-in.component';
 import { SingUpComponent } from '../sing-up/sing-up.component';
 import { UserComponent } from '../user/user.component';
 import { SendemailComponent } from '../sendemail/sendemail.component';
+import { LoginComponent } from '../login/login.component';
+import { LogComponent } from '../amané/log/log.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
     children: [
       {path:'user' , component:UserComponent},
       {path:'send' , component:SendemailComponent},
+      {path:'login' , component:LoginComponent},
+      {path:'log' , component:LogComponent},
 
       {path:'singin' , component:SingInComponent},
       {path:'singup' , component:SingUpComponent},

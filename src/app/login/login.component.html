@@ -1,0 +1,49 @@
+
+<br><br><br><br><br>
+<section class="login py-5 border-top-1">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <div class="container" >
+      <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-8 align-item-center">
+              <div class="border">
+
+                  <h3 class="bg-gray p-4">Login Now</h3>
+                  <form *ngIf="!isLoggedIn"
+                  name="form"
+                  (ngSubmit)="f.form.valid && onSubmit()"
+                  #f="ngForm"
+                  novalidate>
+                      <fieldset class="p-4"><div></div>
+                        <i class="fa fa-user" style="color:blue;"></i><i style="color:rgb(0, 0, 0);font-weight: bold; ">  Username</i> 
+
+                          <input type="text" placeholder="Username" class="border p-3 w-100 my-2" required 
+                          type="text"
+                          name="username"
+                          [(ngModel)]="form.username"  
+                          required
+                          #username="ngModel">
+                          <!-- <i class="glyphicon glyphicon-envelope"></i> -->
+                          <i class="fa fa-expeditedssl"style="color:red;"> </i><i style="color:rgb(0, 0, 0);font-weight: bold; ">  Password</i>
+
+                          <input type="password" placeholder="Password" class="border p-3 w-100 my-2" required
+                          type="password"
+                          name="password"
+                          [(ngModel)]="form.password"
+                          required
+                          minlength="6"
+                          #password="ngModel">
+                          
+                          <div class="loggedin-forgot">
+                                  <input type="checkbox" id="keep-me-logged-in">
+                                  <label for="keep-me-logged-in" class="pt-3 pb-2">Keep me logged in</label>
+                          </div>
+                          <button type="submit" (click)="onSubmit()" class="d-block py-3 px-5 bg-primary text-white border-0 rounded font-weight-bold mt-3">Log in</button>
+                      </fieldset>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+</section>

@@ -18,6 +18,8 @@ import { InvitationfilsComponent } from './invitationfils/invitationfils.compone
 import { UserComponent } from './user/user.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SendemailComponent } from './sendemail/sendemail.component';
+import { LoginComponent } from './login/login.component';
+import { LogComponent } from './amané/log/log.component';
 
 
 
@@ -35,6 +37,8 @@ import { SendemailComponent } from './sendemail/sendemail.component';
     InvitationfilsComponent,
     UserComponent,
     SendemailComponent,
+    LoginComponent,
+    LogComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,7 @@ import { SendemailComponent } from './sendemail/sendemail.component';
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

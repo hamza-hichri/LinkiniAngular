@@ -1,18 +1,20 @@
 <br><br><br><br><br>
-<div class="row">
-    <div class="row">
-        <div class="col-md-12">
+
+
+
+<div class=container>
+    <div class=row style=" display: flex;
+                align-items: center;">
+        <div class="col-md-4">
             <div *ngFor="let user of Listuser |paginate:{
                 itemsPerPage : tablesize,
                 currentPage :page,  
                 totalItems : count
-                };" class="row">
+                };" class="col-md-4">
                 <div class="card" class="text-center">
-                    <div class="card" style="width: 18rem;background-color: rgb(243, 236, 219);">
-                        <img src="\assets\images\background\kisspng-wedding-invitation-computer-icons-symbol-5af3da4a69c969.2032132815259305704333-removebg-preview.png"
-                            style="width: 50%; margin-left: auto; margin-right: auto;" class="card-img-top" alt="...">
+                    <div class="card" style="width: 18rem;background-color: rgb(216, 246, 247);">
+
                         <div class="card-body" style="text-align: center;">
-                            <h5 class="card-title">id : {{user.id_user}}</h5>
                             <h5 class="card-text">name : {{user.name}}</h5>
                             <h5 class="card-text">email : {{user.email}}</h5>
                             <h5 class="card-text">username : {{user.username}}</h5>
