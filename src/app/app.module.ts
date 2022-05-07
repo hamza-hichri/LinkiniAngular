@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { TravelComponent } from './travel/travel.component';
 import { FormComponent } from './travel/form/form.component';
 import { DetailtravelComponent } from './travel/detailtravel/detailtravel.component';
+import { AppUserModule } from './app-user/app-user.module';
 
 
 
@@ -30,6 +31,7 @@ import { DetailtravelComponent } from './travel/detailtravel/detailtravel.compon
     HttpClientModule,
     NgbModule,
     FormsModule,
+    AppUserModule,
     ReactiveFormsModule
   ],
   providers: [],
