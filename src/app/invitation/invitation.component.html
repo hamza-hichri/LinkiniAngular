@@ -9,29 +9,43 @@
         </button>
 
     </div>
-    <div class="center">
+    <div class="center" style="margin-left: 25%;">
         <form>
             <div class="row" class="col-md-6">
+                <i class="fa fa-paperclip
+                " ></i><i style="color:rgb(0, 0, 0);font-weight: bold; ">  Content</i>
+
                 <input type="text" placeholder="invitation Name" [(ngModel)]="i.content"
                     [ngModelOptions]="{standalone : true}">
             </div>
             <div class="row" class="col-md-6">
-                <input type="text" placeholder="v" [(ngModel)]="i.email"
+                <i class="fa fa-envelope-square" ></i><i style="color:rgb(0, 0, 0);font-weight: bold; ">  Email</i>
+  
+                <input type="text" placeholder="exemple@gmail.com" [(ngModel)]="i.email"
                     [ngModelOptions]="{standalone : true}">
                 </div>
             <div class="row" class="col-md-6">
+                <i class=" fa fa-fighter-jet" ></i><i style="color:rgb(0, 0, 0);font-weight: bold; "> invitationdestination</i>
+
                 <input type="text" placeholder="invitationdestination"
                     [(ngModel)]="i.invitaiondestination" [ngModelOptions]="{standalone : true}">
                 </div>
             <div class="row" class="col-md-6">
+                <i class="                 fa fa-map-signs
+                " ></i><i style="color:rgb(0, 0, 0);font-weight: bold; "> State</i>
+
                 <input type="text" placeholder="state" [(ngModel)]="i.state"
                     [ngModelOptions]="{standalone : true}">
             </div>
             <div class="row" class="col-md-6">
+                <i class="fa fa-child" ></i><i style="color:rgb(0, 0, 0);font-weight: bold; "> Employee Username </i>
+
                 <input type="text" placeholder="username" [(ngModel)]="aa.username"
                     [ngModelOptions]="{standalone : true}">
             </div>
             <div class="row" class="col-md-6">
+                <i class="fa fa-lock" style="color:red;"></i><i style="color:rgb(0, 0, 0);font-weight: bold; "> Employee Password</i>
+
                 <input type="text" placeholder="password" [(ngModel)]="aa.password"
                     [ngModelOptions]="{standalone : true}">
             </div>
